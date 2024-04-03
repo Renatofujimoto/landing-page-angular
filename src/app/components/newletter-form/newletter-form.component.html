@@ -1,0 +1,21 @@
+<section class="form-section">
+    <div class="text">
+        <h3>Assine nossa newsletter</h3>
+        <p>Receba notições sobre as novidades da LG. Assine para saber mais.</p>
+    </div>
+
+    <form [formGroup]="newletterForm">
+        <label for="name">Nome</label>
+        <input id="name"formControlName="name"/>
+        <label for="email">E-mail</label>
+        <input id="email" formControlName="email"/>
+        <btn-primary
+        btn-text="Cadastrar"
+        variant="secondary"
+        (submit)="onSubmit()"
+        [disabled]="!newletterForm.valid"
+        [loading]="loading()"
+        >
+        </btn-primary>
+    </form>
+</section>
